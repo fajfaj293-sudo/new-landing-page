@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINETIC — New Collection</title>
+  <meta name="description" content="Interactive streetwear collection featuring heavyweight fleece, technical outerwear, and studio essentials.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Minimalist Header matching reference video -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#top" class="brand-logo" aria-label="Kinetic Home">
+        <svg width="34" height="20" viewBox="0 0 34 20" fill="none" aria-hidden="true">
+          <path d="M2 15.5C9.5 18.5 19 14.5 32 3.5C21.5 11 12.5 13 6.5 10.5C3.5 9.2 3.8 5.5 6.8 2.5C2 6 -1.5 13.8 2 15.5Z" fill="currentColor"/>
+        </svg>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="#rack-section" class="is-active">Home</a>
+        <a href="#rack-section" data-filter-link="all">All Drops</a>
+        <a href="#rack-section" data-filter-link="hoodie">Fleece</a>
+        <a href="#marquee-section">Runway</a>
+        <a href="#footer-section">Atelier</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" id="open-cart-btn" class="icon-btn" aria-label="Open bag">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 7h12l1 13H5L6 7z"/>
+            <path d="M9 7V5a3 3 0 0 1 6 0v2"/>
+          </svg>
+          <span id="cart-count" class="cart-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section: Exact Studio Hanging Rack -->
+    <section id="rack-section" class="hero-rack-section" aria-labelledby="hero-title">
+      <div class="hero-top-bar">
+        <p class="hero-subtitle">NEW COLLECTION &nbsp;&middot;&nbsp; PREMIUM STREETWEAR</p>
+      </div>
+
+      <h1 id="hero-title" class="sr-only">Interactive Clothing Rack Showcase</h1>
+
+      <!-- Studio Cable & Tightly Overlapping Angled Garments -->
+      <div class="rack-stage" id="rack-stage">
+        <div class="rack-cable" aria-hidden="true"></div>
+        <div class="rack-track" id="rack-track" role="list" aria-label="Hanging garments">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+
+      <!-- Bottom HUD Bar matching video -->
+      <div class="hero-bottom-hud">
+        <div class="hud-active-item">
+          <p class="hud-item-name" id="hud-name">Hover a piece · Click to inspect</p>
+          <p class="hud-item-price" id="hud-price">$189.00</p>
+        </div>
+        <div class="hud-editorial">
+          <p>Crafted in heavyweight fleece.</p>
+          <p>Cut oversized. Ready to live.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Grid Section (Requested: more products before footer) -->
+    <section id="catalog-section" class="catalog-section" aria-labelledby="catalog-heading">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">ALL DROPS</span>
+          <h2 id="catalog-heading">The Collection</h2>
+        </div>
+      </div>
+      <div class="catalog-grid" id="catalog-grid">
+        <!-- Populated dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- Sliding Product Showcase / Lookbook Marquee -->
+    <section id="marquee-section" class="marquee-section" aria-labelledby="marquee-heading">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">SEASON 04 ARCHIVE</span>
+          <h2 id="marquee-heading">Curated Silhouettes</h2>
+        </div>
+        <div class="marquee-controls">
+          <button type="button" id="toggle-marquee-btn" class="ghost-btn">Pause</button>
+        </div>
+      </div>
+
+      <div class="marquee-viewport" id="marquee-viewport">
+        <div class="marquee-track" id="marquee-track">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Minimalist Footer -->
+  <footer id="footer-section" class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo-text">KINETIC ATELIER</div>
+        <p class="footer-story">
+          Independent garment studio crafting architectural streetwear in small-batch heavyweight cotton and technical nylon.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Navigation</h3>
+        <ul>
+          <li><a href="#rack-section">Hanging Rack</a></li>
+          <li><a href="#marquee-section">Lookbook Slider</a></li>
+          <li><a href="#top">Back to Top</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h3>Social</h3>
+        <ul>
+          <li><a href="#footer-section">Instagram</a></li>
+          <li><a href="#footer-section">TikTok</a></li>
+          <li><a href="#footer-section">Lookbook PDF</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-cta">
+        <h3>Direct Studio Inquiry</h3>
+        <p>Need custom sizing, wholesale, or a private lookbook preview?</p>
+        <button type="button" id="open-contact-btn" class="primary-btn">Contact Studio</button>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 KINETIC ATELIER. All rights reserved.</p>
+      <p>Fast Static Architecture · Zero-Lag Experience</p>
+    </div>
+  </footer>
+
+  <!-- Full-Viewport Studio Product Detail View (matching 00:05 in reference video) -->
+  <dialog id="product-dialog" class="product-dialog" closedby="any" aria-labelledby="dialog-title">
+    <div class="product-fullscreen">
+      <div class="product-topbar">
+        <span class="eyebrow" id="dialog-category">HEAVYWEIGHT FLEECE</span>
+        <button type="button" id="dialog-close-btn" class="close-text-btn" aria-label="Close product view">
+          Close &times;
+        </button>
+      </div>
+
+      <div class="product-split">
+        <div class="dialog-media">
+          <div class="dialog-garment-stage" id="dialog-garment-stage" title="Hover or click Back/Front to rotate">
+            <!-- Studio garment visual -->
+          </div>
+          <div class="view-toggle" role="group" aria-label="Product angle">
+            <button type="button" class="view-btn is-active" data-angle="front">Front</button>
+            <button type="button" class="view-btn" data-angle="back">Back</button>
+          </div>
+        </div>
+
+        <div class="dialog-info">
+          <h1 id="dialog-title" class="dialog-title">Hoodie</h1>
+          <p id="dialog-price" class="dialog-price">$189.00</p>
+
+          <div class="dialog-option-group">
+            <span class="option-label">Color &nbsp; <strong id="dialog-color-name">Grey</strong></span>
+          </div>
+
+          <div class="dialog-option-group">
+            <span class="option-label">Size</span>
+            <div class="size-grid" id="size-grid" role="radiogroup" aria-label="Select size">
+              <button type="button" class="size-btn" data-size="S">S</button>
+              <button type="button" class="size-btn is-selected" data-size="M">M</button>
+              <button type="button" class="size-btn" data-size="L">L</button>
+              <button type="button" class="size-btn" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <p id="dialog-desc" class="dialog-desc">
+            480 GSM brushed organic cotton fleece with dropped shoulders, double-lined hood, and concealed side pockets.
+          </p>
+
+          <div class="dialog-actions">
+            <button type="button" id="buy-now-btn" class="primary-btn full-width" autofocus>Buy now</button>
+            <button type="button" id="add-to-cart-btn" class="secondary-btn full-width">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Slide-in Shopping Bag Dialog -->
+  <dialog id="cart-dialog" class="cart-dialog" closedby="any" aria-labelledby="cart-title">
+    <div class="cart-shell">
+      <div class="cart-header">
+        <h1 id="cart-title">Your Bag</h1>
+        <button type="button" id="cart-close-btn" class="close-text-btn" aria-label="Close bag">Close &times;</button>
+      </div>
+
+      <div class="cart-items" id="cart-items"></div>
+
+      <div class="cart-footer">
+        <div class="cart-total-row">
+          <span>Subtotal</span>
+          <strong id="cart-subtotal">$0.00</strong>
+        </div>
+        <button type="button" id="checkout-btn" class="primary-btn full-width">Proceed to Checkout</button>
+        <p id="checkout-feedback" class="checkout-feedback" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Quick Contact Inquiry Dialog -->
+  <dialog id="contact-dialog" class="contact-dialog" closedby="any" aria-labelledby="contact-title">
+    <div class="contact-shell">
+      <div class="cart-header">
+        <h1 id="contact-title">Studio Inquiry</h1>
+        <button type="button" id="contact-close-btn" class="close-text-btn" aria-label="Close contact form">Close &times;</button>
+      </div>
+      <form id="contact-form" class="contact-form">
+        <label>
+          <span>Your Name</span>
+          <input type="text" required placeholder="Alex Rivera" autocomplete="name">
+        </label>
+        <label>
+          <span>Email Address</span>
+          <input type="email" required placeholder="alex@studio.com" autocomplete="email">
+        </label>
+        <label>
+          <span>Message</span>
+          <textarea rows="3" required placeholder="Tell us about your order or inquiry..."></textarea>
+        </label>
+        <button type="submit" class="primary-btn full-width">Send Message</button>
+        <p id="contact-feedback" class="checkout-feedback" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
